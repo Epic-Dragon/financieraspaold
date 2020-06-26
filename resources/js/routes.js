@@ -7,8 +7,8 @@ import About from '@/js/components/About';
 import Login from '@/js/pages/LoginPage';
 import View from '@/js/views/View';
 import Clients from '@/js/components/Clients';
-import Prestamos from '@/js/components/Prestamos';
-import Pagos from '@/js/components/Pagos';
+import Payments from '@/js/components/Payments';
+import Loans from '@/js/components/Loans';
 
 Vue.use(VueRouter);
 
@@ -35,14 +35,14 @@ const router = new VueRouter({
                     component: Clients
                 },
                 {
-                    path: '/prestamos',
-                    name: 'prestamos',
-                    component: Prestamos
+                    path: '/loans',
+                    name: 'loans',
+                    component: Loans
                 },
                 {
-                    path: '/pagos',
-                    name: 'pagos',
-                    component: Pagos
+                    path: '/payments',
+                    name: 'payments',
+                    component: Payments
                 },
                 
             ]
