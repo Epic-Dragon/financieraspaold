@@ -24,6 +24,14 @@
         <v-list-item-title>Clientes</v-list-item-title>
       </v-list-item-content>
     </v-list-item>
+    <v-list-item link to="/user-edit">
+      <v-list-item-action>
+        <v-icon>mdi-account-cash</v-icon>
+      </v-list-item-action>
+      <v-list-item-content>
+        <v-list-item-title>Usuario</v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>    
     <v-list-item link to="/loans">
       <v-list-item-action>
         <v-icon>mdi-currency-usd</v-icon>

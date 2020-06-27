@@ -9,6 +9,7 @@ import View from '@/js/views/View';
 import Clients from '@/js/components/Clients';
 import Payments from '@/js/components/Payments';
 import Loans from '@/js/components/Loans';
+import UserEdit from '@/js/pages/User';
 
 Vue.use(VueRouter);
 
@@ -39,6 +40,11 @@ const router = new VueRouter({
                     name: 'loans',
                     component: Loans
                 },
+                {
+                    path: '/user-edit',
+                    name: 'UserEdit',
+                    component: UserEdit
+                },                
                 {
                     path: '/payments',
                     name: 'payments',
