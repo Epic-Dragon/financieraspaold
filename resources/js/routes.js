@@ -26,6 +26,11 @@ const router = new VueRouter({
                     component: Home
                 },
                 {
+                    path: '/user-edit',
+                    name: 'UserEdit',
+                    component: UserEdit
+                },                 
+                {
                     path: '/about',
                     name: 'about',
                     component: About
@@ -39,12 +44,7 @@ const router = new VueRouter({
                     path: '/loans',
                     name: 'loans',
                     component: Loans
-                },
-                {
-                    path: '/user-edit',
-                    name: 'UserEdit',
-                    component: UserEdit
-                },                
+                },               
                 {
                     path: '/payments',
                     name: 'payments',
