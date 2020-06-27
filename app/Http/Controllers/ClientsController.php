@@ -18,11 +18,11 @@ class ClientsController extends Controller
         return response()->json($clients);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function numberClients (){
+        $numClients = Client::select('id')->count();
+        return response()->json($numClients);
+    }
+
     public function create()
     {
         return view('clients.create');
@@ -70,7 +70,8 @@ class ClientsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $Client = Client::find($id);
+        return response()->json($Client);
     }
 
     /**
@@ -101,9 +102,13 @@ class ClientsController extends Controller
     public function destroy($id)
     {
         $client = Client::find($id);
-
+        foreach ($client->loans as $loan){
+            foreach($loan->payments as $payment){
+                $payment->delete();
+            }
+            $loan->delete();
+        }
         $client->delete();
-
-        return $client;
+        return response()->json(true);
     }
 }
