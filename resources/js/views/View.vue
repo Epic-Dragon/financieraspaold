@@ -41,15 +41,9 @@
 
 <script>
 import Navigation from '@/js/components/Navigation';
-import AppBar from '@/js/components/core/AppBar.vue';
-import { mapState } from 'vuex'
-
-import Drawer from '@/js/components/core/Drawer.vue'
 export default {
     components: {
-        navigation: Navigation,
-        AppBar,
-        Drawer,
+        navigation: Navigation
     },
     computed: {
         drawerOpen () {
@@ -57,8 +51,7 @@ export default {
         },
         user () {
             return this.$store.state.user || { name: '' };
-        },
-        ...mapState(['snackbar'])
+        }
     },
     methods: {
         drawerToggle () {

@@ -3,13 +3,13 @@ import VueRouter from 'vue-router';
 import store from '@/js/stores';
 
 import Home from '@/js/components/Home';
-import About from '@/js/components/About';
+import Clients from '@/js/components/clients';
+import Loans from '@/js/pages/loans';
+import Payments from '@/js/pages/payments';
+import ClientsPayments from '@/js/pages/clientsPayments';
+import UserEdit from '@/js/pages/User';
 import Login from '@/js/pages/LoginPage';
 import View from '@/js/views/View';
-import Clients from '@/js/components/Clients';
-import Payments from '@/js/components/Payments';
-import Loans from '@/js/components/Loans';
-import UserEdit from '@/js/pages/User';
 
 Vue.use(VueRouter);
 
@@ -26,16 +26,6 @@ const router = new VueRouter({
                     component: Home
                 },
                 {
-                    path: '/user-edit',
-                    name: 'UserEdit',
-                    component: UserEdit
-                },                 
-                {
-                    path: '/about',
-                    name: 'about',
-                    component: About
-                },
-                {
                     path: '/clients',
                     name: 'clients',
                     component: Clients
@@ -44,11 +34,21 @@ const router = new VueRouter({
                     path: '/loans',
                     name: 'loans',
                     component: Loans
-                },               
+                },
                 {
                     path: '/payments',
                     name: 'payments',
                     component: Payments
+                },
+                {
+                    path: '/payments/:id',
+                    name: 'clientPayments',
+                    component: ClientsPayments
+                },
+                {
+                    path: '/user-edit',
+                    name: 'UserEdit',
+                    component: UserEdit
                 },
                 
             ]

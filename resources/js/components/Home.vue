@@ -9,7 +9,7 @@
             <v-card-title class="headline">Clientes Registrados</v-card-title>
 
             <v-card-subtitle class="display-4">
-                <v-icon size="100" >mdi-account-circle</v-icon>
+                <v-icon size="50" >mdi-account-circle</v-icon>
                {{ number }}
             </v-card-subtitle>
            
